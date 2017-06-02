@@ -53,9 +53,9 @@ gulp.task('sass', () => {
             includePaths: ['scss'],
             onError: browserSync.notify
         }))
+        .pipe(gulp.dest('_site/css'))
         .pipe(gulpIf(prod, prefix(browsers, { cascade: true })))
         .pipe(gulpIf(prod, cleanCSS()))
-        .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({ stream: true }))
         .pipe(gulp.dest('_site/css'));
 });
