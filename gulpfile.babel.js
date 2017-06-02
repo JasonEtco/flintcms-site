@@ -74,7 +74,7 @@ gulp.task('js', () => {
         .pipe(gulp.dest('_site/js'))
         .pipe(browserSync.reload({ stream: true }))
         .pipe(gulpIf(prod, uglify()))
-        .pipe(gulp.dest('js'));
+        .pipe(gulp.dest('_site/js'));
 });
 
 /**
