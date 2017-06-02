@@ -1,0 +1,46 @@
+{
+  "name": "flintcms-site",
+  "version": "1.0.0",
+  "description": "Landing page and documentation for FlintCMS",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"webpack -w\" \"jekyll serve\"",
+    "build": "webpack -p && jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonEtco/flintcms-site.git"
+  },
+  "keywords": [
+    "flintcms",
+    "cms",
+    "landing",
+    "documentation",
+    "nodejs",
+    "react",
+    "redux",
+    "reactjs",
+    "async/await"
+  ],
+  "author": "Jason Etcovitch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JasonEtco/flintcms-site/issues"
+  },
+  "homepage": "https://github.com/JasonEtco/flintcms-site#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
