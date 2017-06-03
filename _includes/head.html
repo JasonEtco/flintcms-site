@@ -21,6 +21,7 @@
   <meta name="theme-color" content="#fe6300">
 
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="article" />
   <meta property="og:article:modified_time" content="{{ site.time }}" />
   {% if page.section %}<meta property="og:article:section" content="{{ page.section }}" />{% endif %}
@@ -31,4 +32,11 @@
   <meta property="og:image:height" content="1200" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:alt" content="FlintCMS, a content-focused management system." />
+
+  <meta property="twitter:card" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+  <meta property="twitter:title" content="summary" />
+  <meta property="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="twitter:image" content="{{ "/assets/flintcms.png" | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="twitter:creator" content="@jasonetco" />
+  <meta property="twitter:description" content="@jasonetco" />
 </head>
