@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   FlintCMS is a Node.js Content Management
   System build to focus on the Content, with a clear
   API for templating.
-baseurl: "https://jasonetco.github.io/flintcms-site/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://flintcms.co" # the base hostname & protocol for your site
 twitter_username: jasonetco
 github_username:  jasonetco

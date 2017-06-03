@@ -1,5 +1,5 @@
 const obj = {
-  hello: 'worlds',
+  hello: 'world',
 };
 
 console.log(obj);
