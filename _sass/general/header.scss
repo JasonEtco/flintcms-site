@@ -1,0 +1,49 @@
+.header {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3em;
+    justify-content: space-between;
+    transition: padding 200ms $bounce, background-color 150ms $standard;
+    will-change: padding, background-color;
+
+    .flint-logo {
+        fill: white;
+        width: 100px;
+        height: 25px;
+    }
+
+    &.has-scrolled {
+        background-color: rgba($grey-dark, 0.7);
+        padding: 1em 3em;
+        border-bottom: 1px solid $orange-dark;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        &-item:not(:first-child) {
+            margin-left: 2em;
+        }
+    }
+
+    &__link {
+        color: white;
+        font-size: 0.8rem;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
