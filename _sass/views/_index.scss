@@ -84,6 +84,14 @@
                     font-size: 1rem;
                 }
             }
+            
+            img {
+                animation-name: float;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease-in-out;
+            }
 
             &::after {
                 position: absolute;
@@ -164,7 +172,7 @@
 
                         &::before {
                             bottom: 0px;
-                            @include triangle(top, 8px, $grey);
+                            @include triangle(top, 8px, darken($grey-light, 7%));
                         }
                     }
                 }
@@ -182,6 +190,14 @@
                 &.is-active {
                     display: flex;
                 }
+
+                img {
+                    animation-name: float;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                    animation-direction: alternate;
+                    animation-timing-function: ease-in-out;
+                }
             }
 
             &__block {
@@ -196,9 +212,14 @@
                 background-color: darken($grey-lighter, 5%);
                 min-height: 400px;
                 padding: 2em 0;
-                border-top: 1px solid $grey;
+                border-top: 1px solid $grey-light;
                 color: $grey;
             }
         }
     }
+}
+
+@keyframes float {
+    0% { transform: translate3d(0,-4px,0); }
+    100% { transform: translate3d(0,4px,0); }
 }

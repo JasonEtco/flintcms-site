@@ -19,4 +19,12 @@
   <link rel="mask-icon" href="{{ "/assets/safari-pinned-tab.svg" | prepend: site.baseurl }}" color="#fe6300">
   <meta name="msapplication-config" content="{{ /assets/browserconfig.xml | prepend: site.baseurl }}">
   <meta name="theme-color" content="#fe6300">
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:author" content="Jason Etcovitch" />
+  <meta property="og:article:modified_time" content="{{ site.time }}" />
+  {% if page.section %}<meta property="og:article:section" content="{{ page.section }}" />{% endif %}
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  <meta property="og:image" content="{{ "/assets/flintcms.png" | prepend: site.baseurl | prepend: site.url }}" />
 </head>
