@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header{% if page.headerClass %} {{ page.headerClass }}{% endif %}">
   <a class="header__logo" href="{{ site.baseurl }}/">{% include flintlogo.svg %}</a>
 
   <nav class="site-nav">
@@ -10,15 +10,9 @@
       </svg>
     </a>-->
     <ul class="nav__list">
-      {% for page in site.pages %}
-        {% if page.title %}
-          <li class="nav__list-item"><a class="nav__link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-
-      <!-- TEMP -->
+      <li class="nav__list-item"><a class="nav__link" href="{{ "/features" | prepend: site.baseurl }}">Features</a></li>
+      <li class="nav__list-item"><a class="nav__link" href="{{ "/docs" | prepend: site.baseurl }}">Documentation</a></li>
       <li class="nav__list-item"><a class="nav__link" href="#">Contribute</a></li>
-      <li class="nav__list-item"><a class="nav__link" href="#">Documentation</a></li>
       <li class="nav__list-item"><a class="nav__link" href="#">Support</a></li>
     </ul>
   </nav>

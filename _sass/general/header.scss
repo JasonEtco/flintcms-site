@@ -7,7 +7,8 @@
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    padding: 3em;
+    padding: 1em;
+    background-color: $orange;
     justify-content: space-between;
     transition: padding 200ms $bounce, background-color 150ms $standard;
     will-change: padding, background-color;
@@ -18,11 +19,17 @@
         height: 25px;
     }
 
-    &.has-scrolled {
-        background-color: rgba($grey-dark, 0.7);
-        padding: 1em 3em;
-        border-bottom: 1px solid $orange-dark;
+    &.home {
+        padding: 3em;
+        background-color: transparent;
+
+        &.has-scrolled {
+            background-color: rgba($grey-dark, 0.7);
+            padding: 1em 3em;
+            border-bottom: 1px solid $orange-dark;
+        }
     }
+
 }
 
 .nav {

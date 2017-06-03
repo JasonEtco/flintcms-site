@@ -75,7 +75,7 @@ gulp.task('build', gulp.series(buildJekyll, buildSass, buildJS));
 function watch(done) {
     gulp.watch(['_sass/**/*.scss', 'css/*.scss'], buildSass);
     gulp.watch('_js/**/*.js', buildJS);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], gulp.series('build'));
+    gulp.watch(['**/*.html', '*.html', '_posts/*', '_includes/*'], gulp.series('build'));
     done();
 };
 
