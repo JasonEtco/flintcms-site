@@ -22,7 +22,6 @@
 
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
   <meta property="og:type" content="article" />
-  <meta property="og:author" content="Jason Etcovitch" />
   <meta property="og:article:modified_time" content="{{ site.time }}" />
   {% if page.section %}<meta property="og:article:section" content="{{ page.section }}" />{% endif %}
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
