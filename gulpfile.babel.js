@@ -85,4 +85,5 @@ function watch(done) {
  */
 
 gulp.task('default', gulp.series('build', browsersync, watch));
-gulp.task('prod', gulp.series('build', () => gulp.src('./_site/**/*').pipe(deploy())));
+gulp.task('deploy', () => gulp.src('./_site/**/*').pipe(deploy()));
+gulp.task('prod', gulp.series('build', 'deploy'));
