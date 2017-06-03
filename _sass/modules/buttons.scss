@@ -1,0 +1,23 @@
+.btn {
+    padding: 1em 1.6em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: $title;
+    transition: background-color 150ms $standard;
+
+    &--white {
+        color: $orange;
+        background-color: white;
+
+        &:hover { background-color: $grey-light; }
+    }
+
+    &--sub {
+        font-size: 0.9rem;
+        background-color: $orange-light;
+        border: 2px solid $orange-dark;
+        color: $orange-dark;
+
+        &:hover { background-color: white; }
+    }
+}

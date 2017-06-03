@@ -1,16 +1,204 @@
 .home {
     &__header {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        height: 70vh;
         color: white;
         background-color: $orange;
+        border-bottom: 2em solid $orange-dark;
 
         .flint-logo {
-            margin-bottom: 2em;
+            margin-bottom: 1em;
             fill: white;
+        }
+
+        &__btns {
+            position: absolute;
+            bottom: 2.6em;
+        }
+
+        &__npm {
+            position: relative;
+            font-family: monospace;
+            padding: 1em 4em;
+            background-color: $grey-dark;
+            border-radius: 5px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                @include triangle(top, 6px, $grey-dark);
+            }
+        }
+
+        &__title {
+            margin: 0 0 2em;
+            opacity: 0.6;
+        }
+    }
+    
+    .section {
+        &__title {
+            margin-top: 0;
+            font-size: 1.6em;
+            color: $orange;
+        }
+
+        &--one {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            padding: 3em 0;
+
+            .card {
+                color: $grey;
+                text-align: center;
+                line-height: 1.4;
+                max-width: 500px;
+                &:last-of-type { margin-left: 2em; }
+            }
+        }
+
+        &--two {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 0;
+
+            &__text {
+                font-size: 1.2rem;
+                max-width: 500px;
+                margin-right: 4em;
+                line-height: 1.4;
+
+                @include media($on-laptop) {
+                    max-width: 300px;
+                    font-size: 1rem;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 120px;
+                left: -100px;
+                width: 150%;
+                height: 400px;
+                background-color: darken($grey-lighter, 5%);
+                transform: rotate(3deg);
+                z-index: -1;
+
+                @include media($on-laptop) {
+                    transform: rotate(5deg);
+                }
+            }
+        }
+
+        &--three {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 4em;
+
+            &__text {
+                max-width: 500px;
+                text-align: center;
+                line-height: 1.4;
+            }
+
+            &__logos {
+                display: flex;
+                align-items: center;
+                margin-top: 1em;
+
+                img:not(:first-child) { margin-left: 3em; }
+            }
+        }
+
+        &--four {
+            &__controls {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .js-home-btn {
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    box-sizing: border-box;
+                    padding: 1em;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    outline: none;
+
+                    &:not(:first-child) { margin-left: 2em; }
+
+                    svg { fill: $grey; width: 1.4em; height: 1.4em; }
+
+                    &:hover { svg { fill: $orange; } }
+
+                    &.is-active {
+                        svg { fill: $orange; }
+
+                        &::before, &::after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+
+                        &::after {
+                            bottom: -1px;
+                            @include triangle(top, 8px, darken($grey-lighter, 5%));
+                        }
+
+                        &::before {
+                            bottom: 0px;
+                            @include triangle(top, 8px, $grey);
+                        }
+                    }
+                }
+            }
+
+            .js-home-block {
+                display: none;
+                max-width: 1024px;
+                margin: 0 auto;
+                align-items: flex-start;
+                justify-content: center;
+
+                *:first-child { margin-right: 3em; }
+
+                &.is-active {
+                    display: flex;
+                }
+            }
+
+            &__block {
+                &__text {
+                    max-width: 400px;
+
+                    h3 { font-size: 1.6em; margin-top: 3em; }
+                }
+            }
+
+            &__content {
+                background-color: darken($grey-lighter, 5%);
+                min-height: 400px;
+                padding: 2em 0;
+                border-top: 1px solid $grey;
+                color: $grey;
+            }
         }
     }
 }
