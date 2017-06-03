@@ -128,7 +128,7 @@
                 align-items: center;
                 margin-top: 1em;
 
-                img:not(:first-child) { margin-left: 3em; }
+                a:not(:first-child) { margin-left: 3em; }
             }
         }
 
@@ -161,6 +161,7 @@
                         &::before, &::after {
                             content: '';
                             position: absolute;
+                            z-index: 2;
                             left: 50%;
                             transform: translateX(-50%);
                         }
@@ -179,16 +180,29 @@
             }
 
             .js-home-block {
-                display: none;
-                max-width: 1024px;
+                position: absolute;
+                display: flex;
+                top: 50%;
+                left: 50%;
+                width: 1024px;
                 margin: 0 auto;
                 align-items: flex-start;
                 justify-content: center;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                transition: opacity 200ms $exit;
+                transition-delay: 0;
+                visibility: hidden;
 
-                *:first-child { margin-right: 3em; }
+                .section--four__block__text {
+                    margin-right: 3em;
+                }
 
                 &.is-active {
-                    display: flex;
+                    opacity: 1;
+                    visibility: visible;
+                    transition-delay: 50ms;
+                    transition-timing-function: $enter;
                 }
 
                 img {
@@ -198,19 +212,31 @@
                     animation-direction: alternate;
                     animation-timing-function: ease-in-out;
                 }
+
+                &:nth-child(odd) {
+                    img { order: -1; }
+
+                    .section--four__block__text {
+                        margin-right: 0;
+                        margin-left: 3em;
+                    }
+                }
             }
 
             &__block {
                 &__text {
-                    max-width: 400px;
+                    max-width: 420px;
 
                     h3 { font-size: 1.6em; margin-top: 3em; }
+
+                    a { color: black; text-decoration: none; }
                 }
             }
 
             &__content {
+                position: relative;
                 background-color: darken($grey-lighter, 5%);
-                min-height: 400px;
+                min-height: 500px;
                 padding: 2em 0;
                 border-top: 1px solid $grey-light;
                 color: $grey;
