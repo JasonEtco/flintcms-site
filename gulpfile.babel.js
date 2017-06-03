@@ -26,13 +26,6 @@ function buildJekyll(done) {
         .on('close', done);
 };
 
-/**
- * Rebuild Jekyll & do page reload
- */
-function rebuildJekyll() {
-    gulp.series(buildJekyll, () => browser.reload());
-};
-
 function browsersync(done) {
     browser.init({ server: { baseDir: '_site' } }, done());
 }
@@ -72,6 +65,9 @@ function buildJS(done) {
     done();
 };
 
+
+gulp.task('build', gulp.series(buildJekyll, buildSass, buildJS));
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -79,7 +75,7 @@ function buildJS(done) {
 function watch(done) {
     gulp.watch(['_sass/**/*.scss', 'css/*.scss'], buildSass);
     gulp.watch('_js/**/*.js', buildJS);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], rebuildJekyll);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], gulp.series('build'));
     done();
 };
 
@@ -87,12 +83,6 @@ function watch(done) {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', gulp.series(browsersync, watch));
 
-function build(done) {
-    gulp.series(buildJekyll, buildSass, buildJS);
-    done();
-}
-gulp.task('build', build);
-
-gulp.task('prod', gulp.series(build, () => gulp.src('./_site/**/*').pipe(deploy())));
+gulp.task('default', gulp.series('build', browsersync, watch));
+gulp.task('prod', gulp.series('build', () => gulp.src('./_site/**/*').pipe(deploy())));
