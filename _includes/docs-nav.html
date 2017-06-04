@@ -1,0 +1,16 @@
+{% assign sections = 'Getting Started|Another One' | split: '|' %}
+
+<nav class="docs-nav">
+  {% for section in sections %}
+    <section class="docs-nav__section">
+      <h6 class="docs-nav__section__title">{{ section }}</h6>
+      <ul class="docs-nav__section__list">
+        {% for post in site.categories.docs %}
+          {% if post.section == section %}
+            <li class="docs-nav__section__list-item"><a href="{{ post.url }}" class="docs-nav__section__link">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+</nav>

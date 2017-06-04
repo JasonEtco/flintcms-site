@@ -1,8 +1,4 @@
 .header {
-    position: fixed;
-    z-index: 9;
-    top: 0;
-    left: 0;
     display: flex;
     align-items: center;
     box-sizing: border-box;
@@ -20,6 +16,10 @@
     }
 
     &.home {
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        left: 0;
         padding: 3em;
         background-color: transparent;
 

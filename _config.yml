@@ -26,4 +26,4 @@ exclude: [
 # Build settings
 markdown: kramdown
 
-permalink: :categories/:title.html
+permalink: :categories/:title/
