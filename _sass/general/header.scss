@@ -1,14 +1,19 @@
 .header {
-    display: flex;
-    align-items: center;
     box-sizing: border-box;
     width: 100%;
     padding: 0.6em;
     border-bottom: 1px solid $grey-light;
-    justify-content: space-between;
     transition: padding 200ms $bounce, background-color 150ms $standard;
     will-change: padding, background-color;
     background-color: $grey-lighter;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: $max-width;
+        margin: 0 auto;
+    }
 
     .flint-logo {
         fill: $grey;
@@ -29,6 +34,10 @@
             fill: white;
             width: 100px;
             height: 25px;
+        }
+
+        .header__inner {
+            max-width: none;
         }
 
         &.has-scrolled {
