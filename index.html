@@ -7,10 +7,10 @@ headerClass: home
   <header class="home__header">
     {% include flintlogo.svg %}
     <h2 class="home__header__title">Content-focused CMS built on Node.js</h2>
-    <a href="#" class="btn btn--white">Get Started</a>
+    <a href="{{ "/docs/introduction" | prepend: site.baseurl }}" class="btn btn--white">Get Started</a>
     <p class="home__header__npm">npm install flintcms</p>
     <div class="home__header__btns">
-      <a href="{{ "/docs" | prepend: site.baseurl }}" class="btn btn--sub">Read Docs</a>
+      <a href="{{ "/docs/introduction" | prepend: site.baseurl }}" class="btn btn--sub">Read Docs</a>
       <a href="{{ site.github_repo }}" target="_blank" class="btn btn--sub">Contribute</a>
     </div>
   </header>

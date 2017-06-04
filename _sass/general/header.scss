@@ -3,16 +3,17 @@
     align-items: center;
     box-sizing: border-box;
     width: 100%;
-    padding: 1em;
-    background-color: $orange;
+    padding: 0.6em;
+    border-bottom: 1px solid $grey-light;
     justify-content: space-between;
     transition: padding 200ms $bounce, background-color 150ms $standard;
     will-change: padding, background-color;
+    background-color: $grey-lighter;
 
     .flint-logo {
-        fill: white;
-        width: 100px;
-        height: 25px;
+        fill: $grey;
+        width: 70px;
+        height: 20px;
     }
 
     &.home {
@@ -22,14 +23,22 @@
         left: 0;
         padding: 3em;
         background-color: transparent;
+        border: none;
+
+        .flint-logo {
+            fill: white;
+            width: 100px;
+            height: 25px;
+        }
 
         &.has-scrolled {
             background-color: rgba($grey-dark, 0.7);
             padding: 1em 3em;
             border-bottom: 1px solid $orange-dark;
         }
-    }
 
+        .nav__link { color: white; }
+    }
 }
 
 .nav {
@@ -45,7 +54,7 @@
     }
 
     &__link {
-        color: white;
+        color: $grey;
         font-size: 0.8rem;
         text-decoration: none;
 

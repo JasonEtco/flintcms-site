@@ -1,0 +1,75 @@
+.docs {
+    display: flex;
+    padding-top: 3em;
+    margin: 0 auto;
+    max-width: 1170px;
+
+    &-nav {
+        box-sizing: border-box;
+        width: 300px;
+        padding-right: 2em;
+        font-size: 0.8rem;
+
+        &__section {
+            & + & {
+                margin-top: 1em;
+            }
+
+            &__title {
+                font-size: 1em;
+                margin: 0 0 0.4em;
+                font-family: $title;
+            }
+
+            &__list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            &__link {
+                display: block;
+                box-sizing: border-box;
+                color: $blue;
+                text-decoration: none;
+                padding: 0.4em;
+                width: 100%;
+
+                &.is-active {
+                    border-radius: 3px;
+                    border: 1px solid $grey-light;
+                    background-color: darken($grey-lighter, 5%);
+                }
+            }
+        }
+    }
+
+    &-post {
+        flex: 2;
+        max-width: 700px;
+        line-height: 1.5;
+        font-size: 0.9rem;
+
+        &__title {
+            margin-top: 0;
+        }
+
+        h2 {
+            margin-top: 2em;
+            color: $grey;
+        }
+
+        a {
+            color: $orange;
+        }
+
+        code {
+            font-family: $monospace;
+            background-color: darken($grey-lighter, 5%);
+            font-size: 0.8em;
+            padding: 0.2em 0.3em;
+            border-radius: 3px;
+            border: 1px solid $grey-light;
+        }
+    }
+}
