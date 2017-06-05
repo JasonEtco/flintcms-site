@@ -34,10 +34,11 @@
                 text-decoration: none;
                 padding: 0.4em;
                 width: 100%;
+                border: 1px solid transparent;
 
                 &.is-active {
                     border-radius: 3px;
-                    border: 1px solid $grey-light;
+                    border-color: $grey-light;
                     background-color: darken($grey-lighter, 5%);
                 }
             }
