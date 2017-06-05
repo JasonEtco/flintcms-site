@@ -5,7 +5,7 @@ date:   2017-06-03 16:16:01 -0600
 categories: docs
 section: Getting Started
 ---
-Flint is a CMS built to be flexible, easy to use an super flexible. Your content needs to fit into more layouts and environments than anyone but you can plan for, so Flint enables you to make the templates you need and fill it with your content.
+Flint is a CMS built to be easy to use and super flexible. Your content needs to fit into more layouts and environments than anyone but you can plan for, so Flint enables you to make the templates you need and fill it with your content.
 
 It's a CMS that is built for those who want to fully design the front-end of their website without wanting to deal with static site generators or older content management systems (that are slow and use outdated technology).
 
