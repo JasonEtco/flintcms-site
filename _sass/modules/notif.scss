@@ -1,0 +1,26 @@
+.notif {
+    display: flex;
+    align-items: center;
+    padding: 1.5em;
+    margin: 2em;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 0.8rem;
+
+    &::before {
+        content: '❗';
+        font-size: 1rem;
+        margin-right: 1em;
+    }
+
+    > p { margin: 0; }
+
+    &--note {
+        background-color: $grey-lighter;
+        border-color: $grey-light;
+
+        &::before {
+            content: '🔔';
+        }
+    }
+}

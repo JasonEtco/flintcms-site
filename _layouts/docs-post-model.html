@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<main class="docs">
+  {% include docs-nav.html %}
+
+  <article class="docs-post docs-post-model" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <header class="docs-post__header docs-post-model__header">
+      <h1 class="docs-post__title" itemprop="name headline">{{ page.title }}</h1>
+      {% if page.modelLink %}<a class="btn btn--sub" href="{{ site.github_repo }}/blob/master/{{ page.modelLink }}" target="_blank" rel="noopener noreferrer">Model</a>{% endif %}
+      {% if page.typeLink %}<a class="btn btn--sub" href="{{ site.github_repo }}/blob/master/{{ page.typeLink }}" target="_blank" rel="noopener noreferrer">GraphQL Type</a>{% endif %}
+    </header>
+
+    <p class="docs-post__primer">{{ page.primer }}</p>
+
+    <div class="docs-post__content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+  </article>
+</main>
