@@ -123,6 +123,8 @@
                 padding: 0.4em 0.6em;
                 color: white;
 
+                &:hover { color: $orange-dark; }
+
                 & + .btn { margin-left: 1em; }
             }
         }

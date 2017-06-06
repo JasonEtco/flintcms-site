@@ -3,7 +3,7 @@
     text-decoration: none;
     border-radius: 5px;
     font-family: $title;
-    transition: background-color 150ms $standard;
+    transition: background-color 150ms $standard, color 150ms $standard;
 
     &--white {
         color: $orange;
