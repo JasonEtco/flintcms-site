@@ -18,7 +18,7 @@ const myFlintServer = new Flint(settings);
 ## Available Settings
 
 ### `siteName`
-The name of your site, as shown in the sidebar of the admin dashboard.
+The name of your website, as shown in the sidebar of the admin dashboard.
 
 ### `siteUrl`
 The URL of your website.
