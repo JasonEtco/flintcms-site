@@ -9,7 +9,7 @@ There are a number of customization options available to you when you created yo
 
 ```js
 const settings = {
-  siteName: 'My Amazing Flint Site',
+  siteName: 'My Amazing Flint Site'
 };
 
 const myFlintServer = new Flint(settings);
