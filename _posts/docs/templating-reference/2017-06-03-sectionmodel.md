@@ -18,7 +18,7 @@ The title of the section.
 A slugified version of the title of the section.
 
 ### `handle`
-A camelcase version of the title, useful for referencing the section in a template.
+A camel case version of the title, useful for referencing the section in a template.
 
 ### `dateCreated`
 A UNIX timestamp of the date the usergroup was created.

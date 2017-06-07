@@ -18,7 +18,7 @@ The title of the field.
 A slugified version of the title of the field.
 
 ### `handle`
-A camelcase version of the title, useful for referencing the field in a template.
+A camel case version of the title, useful for referencing the field in a template.
 
 ### `instructions`
 The instructions given above the field in the admin dashboard.
