@@ -66,7 +66,7 @@ function buildJS(done) {
 };
 
 
-gulp.task('build', gulp.series(buildJekyll, buildSass, buildJS));
+gulp.task('build', gulp.series(buildJekyll, gulp.parallel(buildSass, buildJS)));
 
 /**
  * Watch scss files for changes & recompile
