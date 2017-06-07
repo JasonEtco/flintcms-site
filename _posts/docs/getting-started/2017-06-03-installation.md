@@ -19,7 +19,7 @@ Every JavaScript app needs an entry point. You'll want to create a new JavaScrip
 const Flint = require('flintcms').Flint;
 
 const flintServer = new Flint({
-  siteName: 'My Amazing Flint Site!',
+  siteName: 'My Amazing Flint Site!'
 });
 
 flintServer.startServer();
