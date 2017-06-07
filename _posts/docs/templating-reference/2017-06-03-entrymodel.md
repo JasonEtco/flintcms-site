@@ -27,7 +27,7 @@ A UNIX timestamp for when the field was created.
 The status of the entry, either 'Live', 'Draft' or 'Disabled'.
 
 ### `author`
-The user who created the entry. This is an instance of the [UserModel]({% post_url 2017-06-03-usermodel %}).
+The user who created the entry. This is an instance of the [User Model]({% post_url 2017-06-03-usermodel %}).
 
 ### `dateCreated`
 A UNIX timestamp of when the entry was created.
