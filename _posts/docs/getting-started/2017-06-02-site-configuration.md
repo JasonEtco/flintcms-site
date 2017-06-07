@@ -9,7 +9,7 @@ There are a number of customization options available to you when you created yo
 
 ```js
 const settings = {
-  siteName: 'My Amazing Flint Site',
+  siteName: 'My Amazing Flint Site'
 };
 
 const myFlintServer = new Flint(settings);
@@ -18,7 +18,7 @@ const myFlintServer = new Flint(settings);
 ## Available Settings
 
 ### `siteName`
-The name of your site, as shown in the sidebar of the admin dashboard.
+The name of your website, as shown in the sidebar of the admin dashboard.
 
 ### `siteUrl`
 The URL of your website.
