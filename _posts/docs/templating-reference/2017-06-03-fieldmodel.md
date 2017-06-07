@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/FieldModel.js
 typeLink: server/graphql/types/Fields.js
-primer: Any time you refer to a field in a template, you're actually being provided with a FieldModel object.
+primer: Anytime you refer to a field in a template, you're actually being provided with a FieldModel object.
 ---
 
 ## Field Properties

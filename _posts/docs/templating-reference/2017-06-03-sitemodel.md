@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/SiteModel.js
 typeLink: server/graphql/types/Site.js
-primer: Any time you refer to the site object in a template, you're actually being provided with a SiteModel object.
+primer: Anytime you refer to the site object in a template, you're actually being provided with a SiteModel object.
 ---
 ## Site Properties
 

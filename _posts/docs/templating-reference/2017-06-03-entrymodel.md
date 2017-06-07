@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/EntryModel.js
 typeLink: server/graphql/types/Entries.js
-primer: Any time you refer to an entry in a template, you're actually being provided with an EntryModel object.
+primer: Anytime you refer to an entry in a template, you're actually being provided with an EntryModel object.
 ---
 
 ## Entry Properties

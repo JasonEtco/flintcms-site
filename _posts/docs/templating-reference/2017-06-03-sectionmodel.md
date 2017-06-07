@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/SectionModel.js
 typeLink: server/graphql/types/Sections.js
-primer: Any time you refer to a section in a template, you're actually being provided with a SectionModel object.
+primer: Anytime you refer to a section in a template, you're actually being provided with a SectionModel object.
 ---
 
 ## Section Properties
