@@ -18,7 +18,7 @@ The title of the entry.
 A slugified version of the title of the entry.
 
 ### `url`
-The url to the entry. This is currently `:sectionSlug/:entrySlug`.
+The URL to the entry. This is currently `:sectionSlug/:entrySlug`.
 
 ### `dateCreated`
 A UNIX timestamp for when the field was created.
