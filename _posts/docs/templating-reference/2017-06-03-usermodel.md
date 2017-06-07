@@ -32,7 +32,7 @@ The user's last name.
 The user's ID.
 
 ### `usergroup`
-The user's usergroup. This is an object based on the [UserGroup model]({{ site.baseurl }}{% post_url docs/templating-reference/2017-06-03-usergroupmodel %}).
+The user's usergroup. This is an object based on the [UserGroup model]({% post_url 2017-06-03-usergroupmodel %}).
 
 ### `username`
 The user's username.

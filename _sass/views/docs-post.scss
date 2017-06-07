@@ -76,11 +76,38 @@
             }
 
             h4 {
-                margin-left: 1em;
                 margin-bottom: 0.5em;
                 font-weight: 400;
 
                 + p { margin-left: 1em; margin-top: 0; }
+            }
+
+            ul {
+                padding: 0;
+                list-style-type: none;
+                line-height: 1.8;
+            }
+
+            table {
+                border-collapse: collapse;
+
+                th {
+                    font-size: 0.8rem;
+                    color: $grey;
+                    padding-left: 0.7em;
+                    border-bottom: 1px solid $grey-light;
+                }
+
+                td {
+                    padding: 0.5em;
+                    border-bottom: 1px solid $grey-light;
+
+                    code { white-space: pre; }
+                }
+
+                th, td {
+                    &:not(:first-child) { border-left: 1px solid $grey-light; }
+                }
             }
 
             a {
@@ -127,6 +154,10 @@
 
                 & + .btn { margin-left: 1em; }
             }
+        }
+
+        &__content {
+            h4 { margin-left: 1em; }
         }
     }
 }
