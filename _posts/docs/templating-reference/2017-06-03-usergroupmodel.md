@@ -1,6 +1,6 @@
 ---
 layout: docs-post-model
-title: "User GroupModel"
+title: "UserGroupModel"
 date: 2017-06-03 16:16:01 -0600
 categories: docs templating
 section: Templating Reference
