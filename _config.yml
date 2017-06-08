@@ -20,7 +20,8 @@ exclude: [
   'node_modules',
   'gulpfile.babel.js',
   'package-lock.json',
-  'package.json'
+  'package.json',
+  'README.md'
 ]
 
 # Build settings
