@@ -19,7 +19,7 @@ Every JavaScript app needs an entry point. You'll want to create a new JavaScrip
 const Flint = require('flintcms').Flint;
 
 const flintServer = new Flint({
-  siteName: 'My Amazing Flint Site!',
+  siteName: 'My Amazing Flint Site!'
 });
 
 flintServer.startServer();
@@ -29,7 +29,7 @@ That's the basics right there! When you're ready, you can run the server by runn
 
 ## .env
 
-You will also need a separate `.env` file to store sensitive environment variables, like database connection details. *When your server starts, it will generate a .env file for you if you don't already have one.* Here is what it would look like:
+You will also need a separate `.env` file to store sensitive environment variables, like database connection details. **When your server starts, it will generate a .env file for you if you don't already have one.** Here is what it would look like:
 
 ```
 # Secret settings

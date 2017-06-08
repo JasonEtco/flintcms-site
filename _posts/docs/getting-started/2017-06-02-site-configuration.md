@@ -5,11 +5,11 @@ date: 2017-06-03 16:16:01 -0600
 categories: docs
 section: Getting Started
 ---
-There are a number of customization options available to you when you created your instance of the `Flint` object. You can pass an object of these options as the first parameter when creating the instance, like:
+There are a number of customization options available to you when you created your instance of the `Flint` class. You can pass an object of these options as the first parameter when creating the instance, like:
 
 ```js
 const settings = {
-  siteName: 'My Amazing Flint Site',
+  siteName: 'My Amazing Flint Site'
 };
 
 const myFlintServer = new Flint(settings);
@@ -18,7 +18,7 @@ const myFlintServer = new Flint(settings);
 ## Available Settings
 
 ### `siteName`
-The name of your site, as shown in the sidebar of the admin dashboard.
+The name of your website, as shown in the sidebar of the admin dashboard.
 
 ### `siteUrl`
 The URL of your website.

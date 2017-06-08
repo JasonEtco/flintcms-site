@@ -14,10 +14,10 @@ npm install PLUGIN_NAME
 Then, once the plugin has been added to your project, you can include it in your site's configuration object. In your project's entry point:
 
 ```js
-const PLUGIN = require('PLUGIN');
+const PLUGIN_NAME = require('PLUGIN_NAME');
 
 const siteSettings = {
-  plugins: [ PLUGIN ],
+  plugins: [ PLUGIN_NAME ],
 };
 
 const flintServer = new Flint(siteSettings);
