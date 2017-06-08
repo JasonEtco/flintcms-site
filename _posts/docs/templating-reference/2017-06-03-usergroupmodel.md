@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/UserGroupModel.js
 typeLink: server/graphql/types/UserGroups.js
-primer: Any time you refer to an usergroup in a template, you're actually being provided with a UserGroupModel object.
+primer: Anytime you refer to an usergroup in a template, you're actually being provided with a UserGroupModel object.
 ---
 
 ## User Group Properties

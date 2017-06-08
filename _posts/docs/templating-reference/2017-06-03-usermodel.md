@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/UserModel.js
 typeLink: server/graphql/types/Users.js
-primer: Any time you refer to a user in a template, you're actually being provided with a UserModel object.
+primer: Anytime you refer to a user in a template, you're actually being provided with a UserModel object.
 ---
 
 ## User Properties

@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/AssetModel.js
 typeLink: server/graphql/types/Assets.js
-primer: Any time you refer to an asset in a template, you're actually being provided with an AssetModel object.
+primer: Anytime you refer to an asset in a template, you're actually being provided with an AssetModel object.
 ---
 
 ## Asset Properties

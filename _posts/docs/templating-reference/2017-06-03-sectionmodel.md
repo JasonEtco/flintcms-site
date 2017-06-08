@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/SectionModel.js
 typeLink: server/graphql/types/Sections.js
-primer: Any time you refer to a section in a template, you're actually being provided with a SectionModel object.
+primer: Anytime you refer to a section in a template, you're actually being provided with a SectionModel object.
 ---
 
 ## Section Properties
@@ -18,7 +18,7 @@ The title of the section.
 A slugified version of the title of the section.
 
 ### `handle`
-A camelcase version of the title, useful for referencing the section in a template.
+A camel case version of the title, useful for referencing the section in a template.
 
 ### `dateCreated`
 A UNIX timestamp of the date the usergroup was created.

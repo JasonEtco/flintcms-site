@@ -6,7 +6,7 @@ categories: docs templating
 section: Templating Reference
 modelLink: server/models/FieldModel.js
 typeLink: server/graphql/types/Fields.js
-primer: Any time you refer to a field in a template, you're actually being provided with a FieldModel object.
+primer: Anytime you refer to a field in a template, you're actually being provided with a FieldModel object.
 ---
 
 ## Field Properties
@@ -18,7 +18,7 @@ The title of the field.
 A slugified version of the title of the field.
 
 ### `handle`
-A camelcase version of the title, useful for referencing the field in a template.
+A camel case version of the title, useful for referencing the field in a template.
 
 ### `instructions`
 The instructions given above the field in the admin dashboard.
