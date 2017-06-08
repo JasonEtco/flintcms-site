@@ -21,7 +21,7 @@ A slugified version of the title of the section.
 A camel case version of the title, useful for referencing the section in a template.
 
 ### `dateCreated`
-A UNIX timestamp of the date the usergroup was created.
+A UNIX timestamp of the date the user group was created.
 
 ### `template`
 The template that has been assigned to this section.

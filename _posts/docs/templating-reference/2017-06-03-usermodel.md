@@ -31,8 +31,8 @@ The user's last name.
 ### `_id`
 The user's ID.
 
-### `usergroup`
-The user's usergroup. This is an object based on the [UserGroup model]({% post_url 2017-06-03-usergroupmodel %}).
+### `user group`
+The user's user group. This is an object based on the [User Group model]({% post_url 2017-06-03-usergroupmodel %}).
 
 ### `username`
 The user's username.

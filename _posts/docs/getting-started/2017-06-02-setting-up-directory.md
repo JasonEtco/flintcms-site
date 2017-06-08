@@ -13,7 +13,7 @@ Now that Flint is installed and ready to go, you'll want to design and build you
 |_ public
 ```
 
-The actual paths for these directories can be configured in Flint's main configuration object, but the defaults are above. So, a typical folder structure would look like this:
+The actual paths for these directories can be configured in Flint's main configuration object, but the defaults are above. If the configured paths don't exist, Flint will make the directories when the `Flint` class is instantiated. So, a typical folder structure would look like this:
 
 ```
 |_ templates
@@ -27,7 +27,7 @@ The actual paths for these directories can be configured in Flint's main configu
 
 ## Writing your first Template
 
-The first template you'll want to make is probably an `index.njk` file, to represent your site's homepage. To see a fully fledged example of a series of templates, check out our [demo project](https://github.com/flintcms). Keep in mind that every section needs a template and you can reuse the same template for multiple sections. 
+The first template you'll want to make is probably an `index.njk` file, to represent your site's homepage. To see a fully fledged example of a series of templates, check out our [demo project](https://github.com/JasonEtco/flintcms). Keep in mind that every section needs a template and you can reuse the same template for multiple sections. 
 
-> Note: Putting the `DEBUG=true` variable in your `.env` file will print all of the data available to your templates into the browser's console.
+> Note: If the server is running in `debugMode`, Flint will print all of the data available to your templates into the browser's console.
 {: .notif .notif--note}

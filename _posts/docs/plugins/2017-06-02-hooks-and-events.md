@@ -31,52 +31,52 @@ Here's a list of the events you can listen for, and the data that is passed:
 
 | Event Name | Description |
 | :--------- | :---------- |
-| `pre-new-user`| A [User Model]({% post_url 2017-06-03-usermodel %}) before it's saved to the database. |
-| `post-new-user`| A [User Model]({% post_url 2017-06-03-usermodel %}) after it's been saved to the database. |
+| `pre-new-user`| A [UserModel]({% post_url 2017-06-03-usermodel %}) before it's saved to the database. |
+| `post-new-user`| A [UserModel]({% post_url 2017-06-03-usermodel %}) after it's been saved to the database. |
 | `pre-updated-user`| An object containing the `_id` of the User being updated and the `data` being used to update it. |
-| `post-updated-user`| A [User Model]({% post_url 2017-06-03-usermodel %}) after it's been updated in the database. |
-| `pre-delete-user`| A [User Model]({% post_url 2017-06-03-usermodel %}) before it's been deleted from the database. |
-| `post-delete-user`| A [User Model]({% post_url 2017-06-03-usermodel %}) after it's been deleted from the database. |
+| `post-updated-user`| A [UserModel]({% post_url 2017-06-03-usermodel %}) after it's been updated in the database. |
+| `pre-delete-user`| A [UserModel]({% post_url 2017-06-03-usermodel %}) before it's been deleted from the database. |
+| `post-delete-user`| A [UserModel]({% post_url 2017-06-03-usermodel %}) after it's been deleted from the database. |
 
 #### Entries
 
 | Event Name | Description |
 | :--------- | :---------- |
-| `pre-new-entry`| An [Entry Model]({% post_url 2017-06-03-entrymodel %}) before it's saved to the database. |
-| `post-new-entry`| An [Entry Model]({% post_url 2017-06-03-entrymodel %}) after it's been saved to the database. |
+| `pre-new-entry`| An [EntryModel]({% post_url 2017-06-03-entrymodel %}) before it's saved to the database. |
+| `post-new-entry`| An [EntryModel]({% post_url 2017-06-03-entrymodel %}) after it's been saved to the database. |
 | `pre-updated-entry`| An object containing the `_id` of the Entry being updated and the `data` being used to update it. |
-| `post-updated-entry`| An [Entry Model]({% post_url 2017-06-03-entrymodel %}) after it's been updated in the database. |
-| `pre-delete-entry`| An [Entry Model]({% post_url 2017-06-03-entrymodel %}) before it's been deleted from the database. |
-| `post-delete-entry`| An [Entry Model]({% post_url 2017-06-03-entrymodel %}) after it's been deleted from the database. |
+| `post-updated-entry`| An [EntryModel]({% post_url 2017-06-03-entrymodel %}) after it's been updated in the database. |
+| `pre-delete-entry`| An [EntryModel]({% post_url 2017-06-03-entrymodel %}) before it's been deleted from the database. |
+| `post-delete-entry`| An [EntryModel]({% post_url 2017-06-03-entrymodel %}) after it's been deleted from the database. |
 
 #### Sections
 
 | Event Name | Description |
 | :--------- | :---------- |
-| `pre-new-section`| A [Section Model]({% post_url 2017-06-03-sectionmodel %}) before it's saved to the database. |
-| `post-new-section`| A [Section Model]({% post_url 2017-06-03-sectionmodel %}) after it's been saved to the database. |
+| `pre-new-section`| A [SectionModel]({% post_url 2017-06-03-sectionmodel %}) before it's saved to the database. |
+| `post-new-section`| A [SectionModel]({% post_url 2017-06-03-sectionmodel %}) after it's been saved to the database. |
 | `pre-updated-section`| An object containing the `_id` of the Section being updated and the `data` being used to update it. |
-| `post-updated-section`| A [Section Model]({% post_url 2017-06-03-sectionmodel %}) after it's been updated in the database. |
-| `pre-delete-section`| A [Section Model]({% post_url 2017-06-03-sectionmodel %}) before it's been deleted from the database. |
-| `post-delete-section`| A [Section Model]({% post_url 2017-06-03-sectionmodel %}) after it's been deleted from the database. |
+| `post-updated-section`| A [SectionModel]({% post_url 2017-06-03-sectionmodel %}) after it's been updated in the database. |
+| `pre-delete-section`| A [SectionModel]({% post_url 2017-06-03-sectionmodel %}) before it's been deleted from the database. |
+| `post-delete-section`| A [SectionModel]({% post_url 2017-06-03-sectionmodel %}) after it's been deleted from the database. |
 
 #### Fields
 
-| `pre-new-field`| A [Field Model]({% post_url 2017-06-03-fieldmodel %}) before it's saved to the database. |
-| `post-new-field`| A [Field Model]({% post_url 2017-06-03-fieldmodel %}) after it's been saved to the database. |
+| `pre-new-field`| A [FieldModel]({% post_url 2017-06-03-fieldmodel %}) before it's saved to the database. |
+| `post-new-field`| A [FieldModel]({% post_url 2017-06-03-fieldmodel %}) after it's been saved to the database. |
 | `pre-updated-field`| An object containing the `_id` of the Field being updated and the `data` being used to update it. |
-| `post-updated-field`| A [Field Model]({% post_url 2017-06-03-fieldmodel %}) after it's been updated in the database. |
-| `pre-delete-field`| A [Field Model]({% post_url 2017-06-03-fieldmodel %}) before it's been deleted from the database. |
-| `post-delete-field`| A [Field Model]({% post_url 2017-06-03-fieldmodel %}) after it's been deleted from the database. |
+| `post-updated-field`| A [FieldModel]({% post_url 2017-06-03-fieldmodel %}) after it's been updated in the database. |
+| `pre-delete-field`| A [FieldModel]({% post_url 2017-06-03-fieldmodel %}) before it's been deleted from the database. |
+| `post-delete-field`| A [FieldModel]({% post_url 2017-06-03-fieldmodel %}) after it's been deleted from the database. |
 
-#### UserGroups
+#### User Groups
 
-| `pre-new-usergroup`| A [UserGroup Model]({% post_url 2017-06-03-usergroupmodel %}) before it's saved to the database. |
-| `post-new-usergroup`| A [UserGroup Model]({% post_url 2017-06-03-usergroupmodel %}) after it's been saved to the database. |
-| `pre-updated-usergroup`| An object containing the `_id` of the UserGroup being updated and the `data` being used to update it. |
-| `post-updated-usergroup`| A [UserGroup Model]({% post_url 2017-06-03-usergroupmodel %}) after it's been updated in the database. |
-| `pre-delete-usergroup`| A [UserGroup Model]({% post_url 2017-06-03-usergroupmodel %}) before it's been deleted from the database. |
-| `post-delete-usergroup`| A [UserGroup Model]({% post_url 2017-06-03-usergroupmodel %}) after it's been deleted from the database. |
+| `pre-new-user group`| A [UserGroupModel]({% post_url 2017-06-03-usergroupmodel %}) before it's saved to the database. |
+| `post-new-user group`| A [UserGroupModel]({% post_url 2017-06-03-usergroupmodel %}) after it's been saved to the database. |
+| `pre-updated-user group`| An object containing the `_id` of the User Group being updated and the `data` being used to update it. |
+| `post-updated-user group`| A [UserGroupModel]({% post_url 2017-06-03-usergroupmodel %}) after it's been updated in the database. |
+| `pre-delete-user group`| A [UserGroupModel]({% post_url 2017-06-03-usergroupmodel %}) before it's been deleted from the database. |
+| `post-delete-user group`| A [UserGroupModel]({% post_url 2017-06-03-usergroupmodel %}) after it's been deleted from the database. |
 
 ## Hooks
 

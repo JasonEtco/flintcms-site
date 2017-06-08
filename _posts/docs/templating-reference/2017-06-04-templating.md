@@ -20,22 +20,22 @@ Every template has access to the `flint` object. This is a big object containing
 ## Flint Object Properties
 
 ### `sections`
-An array of [Section Models]({% post_url 2017-06-03-sectionmodel %}).
+An array of [SectionModels]({% post_url 2017-06-03-sectionmodel %}).
 
 ### `entries`
-An array of [Entry Models]({% post_url 2017-06-03-entrymodel %}).
+An array of [EntryModels]({% post_url 2017-06-03-entrymodel %}).
 
 ### `users`
-An array of [User Models]({% post_url 2017-06-03-usermodel %}).
+An array of [UserModels]({% post_url 2017-06-03-usermodel %}).
 
 ### `fields`
-An array of [Field Models]({% post_url 2017-06-03-fieldmodel %}).
+An array of [FieldModels]({% post_url 2017-06-03-fieldmodel %}).
 
-### `usergroups`
-An array of [UserGroup Models]({% post_url 2017-06-03-usergroupmodel %}).
+### `user groups`
+An array of [UserGroupModels]({% post_url 2017-06-03-usergroupmodel %}).
 
 ### `assets`
-An array of [Asset Models]({% post_url 2017-06-03-assetmodel %}).
+An array of [AssetModels]({% post_url 2017-06-03-assetmodel %}).
 
 ### `site`
-A [Site Model]({% post_url 2017-06-03-sitemodel %}) object.
+A [SiteModel]({% post_url 2017-06-03-sitemodel %}) object.

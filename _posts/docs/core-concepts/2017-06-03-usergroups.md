@@ -1,6 +1,6 @@
 ---
 layout: docs-post
-title: "Users"
+title: "User Groups"
 date: 2017-06-03 16:16:01 -0600
 categories: docs
 section: Core Concepts
@@ -9,6 +9,4 @@ Unlike other content management systems, Flint comes with unlimited user groups 
 
 Every time the server is restarted, Flint checks to see if there is an Admin user group and, if necessary, creates one with all permissions enabled. Deleting the Admin user group is disabled on the dashboard, but in case someone does it by mistake directly through the database or some other horrible mistake happens, Flint has you covered.
 
-## Public Registration
-
-Some websites need for their users to be able to sign up for the site, rather than be given an account directly. In your website's Flint settings (under `Settings/Site Settings`) you can enable or disable the endpoints that allow for form or AJAX inputs.
+Each User Group can have a different set of permissions. For the full list of permissions, check out the file in the [GitHub repository]({{ site.github_repo }}/blob/master/server/utils/permissions.json).
