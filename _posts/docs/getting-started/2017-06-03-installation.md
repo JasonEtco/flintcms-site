@@ -49,6 +49,6 @@ MAIL_USER= ...
 MAIL_PASS= ...
 ```
 
-For a Mongo database, mLab is suggested but by no means mandatory. As for emails, Flint uses the [Nodemailer](https://nodemailer.com/about/) package which supports various SMTP services. Flint's recommendation is Mailgun, and if you're having trouble setting it up feel free to [email me](hello@jasonet.co) and I can give you Flint-specific Mailgun credentials.
+For a Mongo database, mLab is suggested but by no means mandatory. As for emails, Flint uses the [Nodemailer](https://nodemailer.com/about/) package which supports various SMTP services. Flint's recommendation is Mailgun, and if you're having trouble setting it up, feel free to [email me](hello@jasonet.co) and I can give you Flint-specific Mailgun credentials.
 
 If you're having trouble with any of these steps, please [open up an issue]({{ site.github_repo }}/issues) detailing your experience.
