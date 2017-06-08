@@ -29,9 +29,6 @@ Path to your templates directory, relative to your server's entry point. Default
 ### `publicPath`
 Path to your public directory, relative to your server's entry point. Default is `public`.
 
-### `pluginPath`
-Path to your plugins directory, relative to your server's entry point. Default is `plugins`.
-
 ### `scssPath`
 Path to your scss directory, relative to your server's entry point. Default is `scss`.
 

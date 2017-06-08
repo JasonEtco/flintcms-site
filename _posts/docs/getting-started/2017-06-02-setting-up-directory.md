@@ -10,7 +10,6 @@ Now that Flint is installed and ready to go, you'll want to design and build you
 ```
 |_ templates
 |_ scss
-|_ plugins
 |_ public
 ```
 
@@ -19,7 +18,6 @@ The actual paths for these directories can be configured in Flint's main configu
 ```
 |_ templates
 |_ scss
-|_ plugins
 |_ public
   |_assets
 |_ node_modules
