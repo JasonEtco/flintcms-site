@@ -16,7 +16,7 @@ npm install flintcms
 Every JavaScript app needs an entry point. You'll want to create a new JavaScript file, probably `index.js`, at the root of your project and fill it with something like this:
 
 ```js
-const Flint = require('flintcms').Flint;
+const Flint = require('flintcms');
 
 const flintServer = new Flint({
   siteName: 'My Amazing Flint Site!'
