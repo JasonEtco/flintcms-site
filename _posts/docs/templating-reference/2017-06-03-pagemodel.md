@@ -9,7 +9,7 @@ typeLink: server/graphql/types/Pages.js
 primer: Anytime you refer to a page in a template, you're actually being provided with a PageModel object.
 ---
 
-## Section Properties
+## Page Properties
 
 ### `title`
 The title of the page.
@@ -46,3 +46,6 @@ The field's handle.
 
 #### `fields[].value`
 The value of the field for this page.
+
+> If you know the handle of a field, you can get the value in the page by using `page.FIELDHANDLE`.
+{: .notif .notif--note}
