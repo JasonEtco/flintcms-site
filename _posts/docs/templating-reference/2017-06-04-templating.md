@@ -19,6 +19,9 @@ Every template has access to the `flint` object. This is a big object containing
 
 ## Flint Object Properties
 
+### `pages`
+An array of [PageModels]({% post_url 2017-06-03-pagemodel %}).
+
 ### `sections`
 An array of [SectionModels]({% post_url 2017-06-03-sectionmodel %}).
 
