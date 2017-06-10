@@ -7,12 +7,46 @@
     will-change: padding, background-color;
     background-color: $grey-lighter;
 
+    @include media($on-mobile) {
+        width: 200px;
+        height: 100%;
+        padding: 0 !important;
+        background-color: transparent;
+    }
+
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         max-width: $max-width;
         margin: 0 auto;
+        transition: transform 150ms $exit;
+
+        @include media($on-mobile) {
+            box-sizing: border-box;
+            width: 200px;
+            height: 100%;
+            padding: 2em;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background-color: $grey-dark;
+            border-right: 1px solid $grey-darker;
+            transform: translateX(-100%);
+        }
+    }
+
+    &.is-active {
+        .header__inner {
+            transform: translateX(0);
+            transition-timing-function: $enter;
+        }
+
+        & + .header__overlay {
+            opacity: 0.5;
+            visibility: visible;
+            pointer-events: initial;
+        }
     }
 
     .flint-logo {
@@ -48,9 +82,46 @@
 
         .nav__link { color: white; }
     }
+
+    &__overlay {
+        position: fixed;
+        z-index: 2;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition-property: opacity, visibility;
+        transition-duration: 150ms;
+        transition-timing-function: $standard;
+
+        @include media($on-mobile) {
+            display: block;
+        }
+    }
 }
 
 .nav {
+    &__button {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        display: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        svg { fill: white; }
+
+        @include media($on-mobile) {
+            display: block;
+        }
+    }
+
     &__list {
         display: flex;
         list-style-type: none;
@@ -60,12 +131,29 @@
         &-item:not(:first-child) {
             margin-left: 2em;
         }
+
+        @include media($on-mobile) {
+            margin-top: 2em;
+            flex-direction: column;
+
+            .nav__list {
+                &-item {
+                    margin: 0;
+                }
+            }
+        }
     }
 
     &__link {
+        display: block;
         color: $grey;
         font-size: 0.8rem;
         text-decoration: none;
+
+        @include media($on-mobile) {
+            font-size: 1.2rem;
+            margin-bottom: 0.4em;
+        }
 
         &:hover {
             text-decoration: underline;
