@@ -4,11 +4,69 @@
     margin: 0 auto;
     max-width: $max-width;
 
+    @include media($on-mobile) {
+        box-sizing: border-box;
+        display: block;
+        padding: 1em;
+        width: 100%;
+        max-width: 100%;
+    }
+
     &-nav {
         box-sizing: border-box;
         width: 300px;
         padding-right: 2em;
         font-size: 0.8rem;
+
+        @include media($on-mobile) {
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($grey-light, 0.9);
+            padding: 2em;
+            box-sizing: border-box;
+            overflow: auto;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 150ms $standard;
+
+            &.is-active {
+                opacity: 1;
+                pointer-events: initial;
+            }
+        }
+
+        &__button {
+            display: none;
+            padding: 0.6em 0.8em;
+            border: 1px solid $grey-light;
+            border-radius: 3px;
+            margin-top: 3em;
+            margin-bottom: 4em;
+            background: $grey-lighter;
+            font-size: 0.8rem;
+            font-family: inherit;
+
+            @include media($on-mobile) {
+                display: block;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            display: none;
+            border: none;
+            background: none;
+
+            @include media($on-mobile) {
+                display: block;
+            }
+        }
 
         &__section {
             & + & {
@@ -155,6 +213,10 @@
                 font-size: 0.7rem;
                 padding: 0.4em 0.6em;
                 color: white;
+
+                @include media($on-mobile) {
+                    display: none;
+                }
 
                 &:hover { color: $orange-dark; }
 

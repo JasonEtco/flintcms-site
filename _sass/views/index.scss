@@ -1,4 +1,5 @@
 .home {
+    p a { color: $orange; }
     &__header {
         position: relative;
         display: flex;
@@ -9,6 +10,11 @@
         color: white;
         background-color: $orange;
         border-bottom: 2em solid $orange-dark;
+        text-align: center;
+
+        @include media($on-mobile) {
+            padding: 0 2em;
+        }
 
         .flint-logo {
             margin-bottom: 1em;
@@ -18,6 +24,10 @@
         &__btns {
             position: absolute;
             bottom: 2.6em;
+
+            @include media($on-mobile) {
+                bottom: 2em;
+            }
         }
 
         &__npm {
@@ -56,12 +66,24 @@
             justify-content: center;
             padding: 3em 0;
 
+            @include media($on-mobile) {
+                align-items: center;
+                flex-direction: column;
+            }
+
             .card {
                 color: $grey;
                 text-align: center;
                 line-height: 1.4;
                 max-width: 500px;
                 &:last-of-type { margin-left: 2em; }
+
+                @include media($on-mobile) {
+                    width: 90%;
+                    padding: 1em;
+
+                    &:last-of-type { margin-left: 0; margin-top: 1em; }
+                }
             }
         }
 
@@ -73,6 +95,16 @@
             justify-content: center;
             padding: 100px 0;
 
+            @include media($on-mobile) {
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                padding: 1em 0;
+
+                &::after { display: none; }
+            }
+
             &__text {
                 font-size: 1.2rem;
                 max-width: 500px;
@@ -80,8 +112,9 @@
                 line-height: 1.4;
 
                 @include media($on-laptop) {
-                    max-width: 300px;
                     font-size: 1rem;
+                    margin: 1em 0 0;
+                    order: 2;
                 }
             }
             
@@ -91,6 +124,10 @@
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
                 animation-timing-function: ease-in-out;
+
+                @include media($on-mobile) {
+                    display: none;
+                }
             }
 
             &::after {
@@ -117,6 +154,11 @@
             justify-content: center;
             padding-bottom: 4em;
 
+            @include media($on-mobile) {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+
             &__text {
                 max-width: 500px;
                 text-align: center;
@@ -129,6 +171,17 @@
                 margin-top: 1em;
 
                 a:not(:first-child) { margin-left: 3em; }
+
+                @include media($on-mobile) {
+                    a {
+                        width: 50%;
+                        text-align: center;
+                        &:not(:first-child) { margin-left: 0; }
+
+                        img { max-width: 100%; }
+                    }
+                    flex-wrap: wrap;
+                }
             }
         }
 
@@ -194,8 +247,18 @@
                 transition-delay: 0;
                 visibility: hidden;
 
+
+                @include media($on-mobile) {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    width: 90%;
+                }
+
                 .section--four__block__text {
                     margin-right: 3em;
+
+                    @include media($on-mobile) { margin-right: 0; }
                 }
 
                 &.is-active {
@@ -211,6 +274,10 @@
                     animation-iteration-count: infinite;
                     animation-direction: alternate;
                     animation-timing-function: ease-in-out;
+
+                    @include media($on-mobile) {
+                        max-width: 100%;
+                    }
                 }
 
                 &:nth-child(odd) {
@@ -219,6 +286,8 @@
                     .section--four__block__text {
                         margin-right: 0;
                         margin-left: 3em;
+
+                        @include media($on-mobile) { margin-left: 0; }
                     }
                 }
             }
@@ -227,7 +296,12 @@
                 &__text {
                     max-width: 420px;
 
-                    h3 { font-size: 1.6em; margin-top: 3em; }
+                    h3 {
+                        font-size: 1.6em;
+                        margin-top: 3em;
+
+                        @include media($on-mobile) { margin-top: 1em; }
+                    }
 
                     a { color: black; text-decoration: none; }
                 }
@@ -240,6 +314,8 @@
                 padding: 2em 0;
                 border-top: 1px solid $grey-light;
                 color: $grey;
+
+                @include media($on-mobile) { min-height: 400px; }
             }
         }
     }

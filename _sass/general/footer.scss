@@ -7,6 +7,11 @@
     font-size: 0.8rem;
     padding: 2em 0;
     border-top: 1px solid $grey-light;
+    text-align: center;
+
+    @include media($on-mobile) {
+        padding: 2em 1em;
+    }
 
     p {
         margin: 0 0 0.5em;
@@ -16,5 +21,9 @@
 
     &__links a:not(:first-child) {
         margin-left: 3em;
+
+        @include media($on-mobile) {
+            margin-left: 0.5em;
+        }
     }
 }

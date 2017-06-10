@@ -1,6 +1,10 @@
 const header = document.querySelector('.header');
 const headerOverlay = document.querySelector('.header__overlay');
 const navButton = document.querySelector('.nav__button');
+const nav = document.querySelector('.nav');
+const docsNav = document.querySelector('.docs-nav');
+const docsNavButton = document.querySelector('.docs-nav__button');
+const docsNavClose = document.querySelector('.docs-nav__close');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 400) {
@@ -17,6 +21,16 @@ if (navButton && header && headerOverlay) {
 
   headerOverlay.addEventListener('click', () => {
     header.classList.remove('is-active');
+  });
+}
+
+if (docsNavButton && docsNav && docsNavClose) {
+  docsNavButton.addEventListener('click', () => {
+    docsNav.classList.add('is-active');
+  });
+
+  docsNavClose.addEventListener('click', () => {
+    docsNav.classList.remove('is-active');
   });
 }
 

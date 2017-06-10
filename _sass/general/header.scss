@@ -8,10 +8,14 @@
     background-color: $grey-lighter;
 
     @include media($on-mobile) {
-        width: 200px;
-        height: 100%;
-        padding: 0 !important;
-        background-color: transparent;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0.5em !important;
+        background-color: $grey-light !important;
+        border-bottom: 1px solid $grey !important;
     }
 
     &__inner {
@@ -20,26 +24,23 @@
         justify-content: space-between;
         max-width: $max-width;
         margin: 0 auto;
-        transition: transform 150ms $exit;
 
         @include media($on-mobile) {
-            box-sizing: border-box;
-            width: 200px;
-            height: 100%;
-            padding: 2em;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            background-color: $grey-dark;
-            border-right: 1px solid $grey-darker;
-            transform: translateX(-100%);
+            width: 100%;
+            margin: 0 auto;
+
+            .flint-logo {
+                fill: $grey-dark !important;
+                height: 20px !important;
+            }
         }
     }
 
     &.is-active {
-        .header__inner {
+        .nav {
             transform: translateX(0);
             transition-timing-function: $enter;
+            pointer-events: initial;
         }
 
         & + .header__overlay {
@@ -53,6 +54,10 @@
         fill: $grey;
         width: 70px;
         height: 20px;
+
+        @include media($on-mobile) {
+            fill: white;
+        }
     }
 
     &.home {
@@ -78,6 +83,12 @@
             background-color: rgba($grey-dark, 0.7);
             padding: 1em 3em;
             border-bottom: 1px solid $orange-dark;
+
+            @include media($on-mobile) {
+                padding: 2em;
+                background-color: transparent;
+                border-bottom: none;
+            }
         }
 
         .nav__link { color: white; }
@@ -106,16 +117,27 @@
 }
 
 .nav {
+    @include media($on-mobile) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        padding: 2em;
+        pointer-events: none;
+        background-color: $grey-dark !important;
+        border-right: 1px solid $grey-darker;
+        transform: translateX(-100%);
+        transition: transform 150ms $exit;
+    }
+
     &__button {
-        position: absolute;
-        top: 1em;
-        left: 1em;
         display: none;
         border: none;
         background: none;
         cursor: pointer;
 
-        svg { fill: white; }
+        svg { fill: $grey-dark; }
 
         @include media($on-mobile) {
             display: block;
@@ -153,6 +175,7 @@
         @include media($on-mobile) {
             font-size: 1.2rem;
             margin-bottom: 0.4em;
+            color: white;
         }
 
         &:hover {
