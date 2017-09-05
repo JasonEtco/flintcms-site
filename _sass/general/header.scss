@@ -1,7 +1,7 @@
 .header {
     box-sizing: border-box;
     width: 100%;
-    padding: 0.6em;
+    padding: 1em;
     border-bottom: 1px solid $grey-light;
     transition: padding 200ms $bounce, background-color 150ms $standard;
     will-change: padding, background-color;
@@ -52,7 +52,7 @@
 
     .flint-logo {
         fill: $grey;
-        width: 70px;
+        width: 90px;
         height: 20px;
 
         @include media($on-mobile) {
@@ -169,7 +169,7 @@
     &__link {
         display: block;
         color: $grey;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         text-decoration: none;
 
         @include media($on-mobile) {

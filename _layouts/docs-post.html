@@ -5,7 +5,6 @@ layout: default
   {% include docs-nav.html %}
 
   <article class="docs-post" itemscope itemtype="http://schema.org/BlogPosting">
-
     <header class="docs-post__header">
       <h1 class="docs-post__title" itemprop="name headline">{{ page.title }}</h1>
     </header>
@@ -14,5 +13,15 @@ layout: default
       {{ content }}
     </div>
 
+    <footer class="docs-post__footer">
+      {% if page.previous %}
+        <a href="{{ page.previous.url }}">👈 {{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ page.next.url }}">{{ page.next.title }} 👉</a>
+      {% endif %}
+    </footer>
+
+    <p class="docs-post__end">Find a mistake or want to help improve this documentation? <a href="{{ site.docs-github_repo }}/edit/master/{{ page.path }}">Suggest changes on GitHub.</a></p>
   </article>
 </main>
