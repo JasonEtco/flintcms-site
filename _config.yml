@@ -9,7 +9,7 @@
 title: FlintCMS
 email: jasonetco@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  FlintCMS is a super-performant, content-focused Node.js Content Management
+  FlintCMS is a super-speedy, content-focused Node.js Content Management
   System with a clear templating API and tons of other features.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://flintcms.co" # the base hostname & protocol for your site
