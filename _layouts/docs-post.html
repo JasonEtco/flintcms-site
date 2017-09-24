@@ -15,10 +15,10 @@ layout: default
 
     <footer class="docs-post__footer">
       {% if page.previous %}
-        <a href="{{ page.previous.url }}">👈 {{ page.previous.title }}</a>
+        <a href="{{ page.previous.url }}">{% include svgs/chevron-left.svg %} {{ page.previous.title }}</a>
       {% endif %}
       {% if page.next %}
-        <a href="{{ page.next.url }}">{{ page.next.title }} 👉</a>
+        <a href="{{ page.next.url }}">{{ page.next.title }} {% include svgs/chevron-right.svg %}</a>
       {% endif %}
     </footer>
 

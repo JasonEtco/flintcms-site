@@ -13,11 +13,15 @@
     }
 
     &--sub {
+        padding: 0.4em 0.6em;
+        border: 1px solid $orange-dark;
+        border-radius: 3px;
+        background-color: $orange;
+        background-image: linear-gradient(to top, rgba(white, 0), rgba(white, 0.1));
+        color: white;
         font-size: 0.9rem;
-        background-color: $orange-light;
-        border: 2px solid $orange-dark;
-        color: $orange-dark;
+        font-family: $font;
 
-        &:hover { background-color: white; }
+        &:hover { background-color: $orange-light; }
     }
 }

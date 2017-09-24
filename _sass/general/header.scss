@@ -1,21 +1,16 @@
 .header {
     box-sizing: border-box;
     width: 100%;
-    padding: 1em;
+    padding: 1.6em 1em;
     border-bottom: 1px solid $grey-light;
     transition: padding 200ms $bounce, background-color 150ms $standard;
     will-change: padding, background-color;
-    background-color: $grey-lighter;
 
     @include media($on-mobile) {
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
+        position: relative;
+        z-index: 3;
         width: 100%;
-        padding: 0.5em !important;
-        background-color: $grey-light !important;
-        border-bottom: 1px solid $grey !important;
+        padding: 1em;
     }
 
     &__inner {
@@ -30,7 +25,6 @@
             margin: 0 auto;
 
             .flint-logo {
-                fill: $grey-dark !important;
                 height: 20px !important;
             }
         }
@@ -54,40 +48,17 @@
         fill: $grey;
         width: 90px;
         height: 20px;
-
-        @include media($on-mobile) {
-            fill: white;
-        }
     }
 
     &.home {
-        position: fixed;
-        z-index: 9;
-        top: 0;
-        left: 0;
-        padding: 3em;
-        background-color: transparent;
+        background-color: $orange;
         border: none;
 
         .flint-logo {
             fill: white;
-            width: 100px;
-            height: 25px;
-        }
-
-        .header__inner {
-            max-width: none;
-        }
-
-        &.has-scrolled {
-            background-color: rgba($grey-dark, 0.7);
-            padding: 1em 3em;
-            border-bottom: 1px solid $orange-dark;
 
             @include media($on-mobile) {
-                padding: 2em;
-                background-color: transparent;
-                border-bottom: none;
+                display: none;
             }
         }
 
@@ -168,8 +139,9 @@
 
     &__link {
         display: block;
-        color: $grey;
-        font-size: 0.9rem;
+        color: $grey-dark;
+        font-size: 0.85rem;
+        font-weight: 500;
         text-decoration: none;
 
         @include media($on-mobile) {

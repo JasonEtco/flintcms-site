@@ -8,44 +8,49 @@ headerClass: home
     {% include flintlogo.svg %}
     <h2 class="home__header__title">Content-focused CMS built on Node.js</h2>
     <a href="{{ "/docs/introduction" | prepend: site.baseurl }}" class="btn btn--white">Get Started</a>
-    <p class="home__header__npm">npm install flintcms</p>
-    <div class="home__header__btns">
-      <a href="{{ "/docs/introduction" | prepend: site.baseurl }}" class="btn btn--sub">Read Docs</a>
-      <a href="{{ site.github_repo }}" target="_blank" class="btn btn--sub">Contribute</a>
+    <div class="home__header__npm">
+      <p class="home__header__npm__p">npm install flintcms</p>
     </div>
   </header>
 
   <section class="section section--one">
-    <div class="card">
-      <h3>Built on a modern stack</h3>
-      <p>Most Content Management Systems use old technology that isn’t as fast or as easy to work with as modern JavaScript. Flint uses Node.js, MongoDB and ReactJS to make the most out of the speedy state of JS.</p>
-    </div>
-    <div class="card">
-      <h3>Async/Await for it...</h3>
-      <p>Using Node.js version 8.x, Flint is able to leverage the async/await keywords to make asynchronous functionality exceptionally clear, declarative and easy to work with.</p>
+    <div class="section__inner">
+      <div class="card">
+        <h3>Built on a modern stack</h3>
+        <p>Most Content Management Systems use old technology that isn’t as fast or as easy to work with as modern JavaScript. Flint uses Node.js, MongoDB and ReactJS to make the most out of the speedy state of JS.</p>
+      </div>
+      <div class="card">
+        <h3>Async/Await for it...</h3>
+        <p>Using Node.js version 8.x, Flint is able to leverage the async/await keywords to make asynchronous functionality exceptionally clear, declarative and easy to work with.</p>
+      </div>
     </div>
   </section>
 
   <section class="section section--two">
-    <div class="section--two__text">
-      <h3 class="section__title">The only theme is yours.</h3>
-      <p>FlintCMS doesn’t need a theme system because no website is the same. We give you the capabilities to design and code your own front-end, then hook it up to the database of content using template variables.</p>
+    <div class="section__inner">
+      <img src="assets/template.png" alt="Screenshot of the code for a template">
+
+      <div class="section--two__text">
+        <h3 class="section__title">The only theme is yours.</h3>
+        <p>FlintCMS doesn’t need a theme system because no website is the same. We give you the capabilities to design and code your own front-end, then hook it up to the database of content using template variables.</p>
+      </div>
     </div>
-    <img src="assets/template.png" alt="Screenshot of the code for a template">
   </section>
 
-  <section class="section--three">
-    <div class="section--three__text">
-      <h3 class="section__title">Free and Open Source</h3>
-      <p>Nowadays, no software is written entirely by one person. Flint uses open source software and is open source itself, and we’re always looking for people to <a href="{{ site.github_repo }}">help make it better</a>.</p>
-    </div>
-    <div class="section--three__logos">
-      <a target="_blank" href="https://nodejs.org/en/"><img src="assets/os-logos/node.png" alt="Node.js" title="Node.js"></a>
-      <a target="_blank" href="https://www.mongodb.com/"><img src="assets/os-logos/mongo.png" alt="MongoDB" title="MongoDB"></a>
-      <a target="_blank" href="https://facebook.github.io/react"><img src="assets/os-logos/react.png" alt="ReactJS" title="ReactJS"></a>
-      <a target="_blank" href="http://graphql.org/"><img src="assets/os-logos/graphql.png" alt="GraphQL" title="GraphQL"></a>
-      <a target="_blank" href="http://sass-lang.com/"><img src="assets/os-logos/sass.png" alt="SASS" title="SASS"></a>
-      <a target="_blank" href="https://mozilla.github.io/nunjucks/"><img src="assets/os-logos/nunjucks.png" alt="Nunjucks" title="Nunjucks"></a>
+  <section class="section section--three">
+    <div class="section__inner">
+      <div class="section--three__text">
+        <h3 class="section__title">Free and Open Source</h3>
+        <p>Nowadays, no software is written entirely by one person. Flint uses open source software and is open source itself, and we’re always looking for people to <a href="{{ site.github_repo }}">help make it better</a>.</p>
+      </div>
+      <div class="section--three__logos">
+        <a target="_blank" href="https://nodejs.org/en/"><img src="assets/os-logos/node.png" alt="Node.js" title="Node.js"></a>
+        <a target="_blank" href="https://www.mongodb.com/"><img src="assets/os-logos/mongo.png" alt="MongoDB" title="MongoDB"></a>
+        <a target="_blank" href="https://facebook.github.io/react"><img src="assets/os-logos/react.png" alt="ReactJS" title="ReactJS"></a>
+        <a target="_blank" href="http://graphql.org/"><img src="assets/os-logos/graphql.png" alt="GraphQL" title="GraphQL"></a>
+        <a target="_blank" href="http://sass-lang.com/"><img src="assets/os-logos/sass.png" alt="SASS" title="SASS"></a>
+        <a target="_blank" href="https://mozilla.github.io/nunjucks/"><img src="assets/os-logos/nunjucks.png" alt="Nunjucks" title="Nunjucks"></a>
+      </div>
     </div>
   </section>
 
@@ -58,36 +63,38 @@ headerClass: home
     </div>
 
     <div class="section--four__content">
-      <div class="js-home-block is-active">
-        <div class="section--four__block__text">
-          <h3>Granular Permissions</h3>
-          <p>Right out of the box, Flint allows for multiple user groups with different permissions for each one. This gives you more control over the capabilities of the different kinds of users managing content on your website.</p>
+      <div class="section__inner">
+        <div class="js-home-block is-active">
+          <div class="section--four__block__text">
+            <h3>Granular Permissions</h3>
+            <p>Right out of the box, Flint allows for multiple user groups with different permissions for each one. This gives you more control over the capabilities of the different kinds of users managing content on your website.</p>
+          </div>
+          <img src="assets/usergroup.png" alt="Screenshot of the various available permissions for each user group">
         </div>
-        <img src="assets/usergroup.png" alt="Screenshot of the various available permissions for each user group">
-      </div>
-
-      <div class="js-home-block">
-        <div class="section--four__block__text">
-          <h3>So Speedy</h3>
-          <p>Node.js and ReactJS make a great pair, especially when it comes to performance. The templating engine is blazing fast, and the admin dashboard is even faster. Using GraphQL, queries are lean and performant making every request a great experience for your users.</p>
+  
+        <div class="js-home-block">
+          <div class="section--four__block__text">
+            <h3>So Speedy</h3>
+            <p>Node.js and ReactJS make a great pair, especially when it comes to performance. The templating engine is blazing fast, and the admin dashboard is even faster. Using GraphQL, queries are lean and performant making every request a great experience for your users.</p>
+          </div>
+          <img src="assets/speed.png" alt="Screenshot of a GraphQL query">
         </div>
-        <img src="assets/speed.png" alt="Screenshot of a GraphQL query">
-      </div>
-
-      <div class="js-home-block">
-        <div class="section--four__block__text">
-          <h3>Full Front-End Control</h3>
-          <p>There are no restrictions; you have the ability to design and code the front-end of your website however you see fit. Using <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a> templating variables, every template has access to whatever content it needs.</p>
+  
+        <div class="js-home-block">
+          <div class="section--four__block__text">
+            <h3>Full Front-End Control</h3>
+            <p>There are no restrictions; you have the ability to design and code the front-end of your website however you see fit. Using <a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a> templating variables, every template has access to whatever content it needs.</p>
+          </div>
+          <img src="assets/frontend.png" alt="Screenshot of some template and style code">
         </div>
-        <img src="assets/frontend.png" alt="Screenshot of some template and style code">
-      </div>
-
-      <div class="js-home-block">
-        <div class="section--four__block__text">
-          <h3>Rich Text Editor</h3>
-          <p>The custom-built rich text editor, built on top of DraftJS, makes writing a breeze. The styles it outputs can still be styled using your own CSS, but it gives a great place for content writers to start thinking about their formatting.</p>
+  
+        <div class="js-home-block">
+          <div class="section--four__block__text">
+            <h3>Rich Text Editor</h3>
+            <p>The custom-built rich text editor, built on top of DraftJS, makes writing a breeze. The styles it outputs can still be styled using your own CSS, but it gives a great place for content writers to start thinking about their formatting.</p>
+          </div>
+          <img src="assets/richtext.png" alt="Screenshot of the rich text editor">
         </div>
-        <img src="assets/richtext.png" alt="Screenshot of the rich text editor">
       </div>
     </div>
   </section>

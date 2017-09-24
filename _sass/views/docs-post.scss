@@ -7,6 +7,7 @@
     max-width: $max-width;
 
     @include media($on-mobile) {
+        padding-top: 0;
         box-sizing: border-box;
         display: block;
         width: 100%;
@@ -22,6 +23,7 @@
         box-sizing: border-box;
         width: 300px;
         padding-right: 2em;
+        padding-bottom: 2em;
         font-size: 0.9rem;
 
         @include media($on-mobile) {
@@ -114,12 +116,16 @@
         font-family: $body;
         margin-bottom: 3em;
 
+        &__header {
+            padding-bottom: 1.2em;
+            margin-bottom: 1.5em;
+            border-bottom: 1px solid lighten($grey-light, 8%);
+        }
+
         &__title {
-            margin-top: 0;
+            margin: 0;
             line-height: 1;
             font-size: 2.5rem;
-            padding-bottom: 0.5em;
-            border-bottom: 1px solid lighten($grey-light, 8%);
         }
 
         &__primer {
@@ -217,14 +223,19 @@
 
         &__footer {
             display: flex;
+            align-items: center;
             justify-content: space-between;
             margin-top: 3em;
 
             a {
                 color: $blue;
                 text-decoration: none;
-
+                
                 &:hover { text-decoration: underline; }
+            }
+            svg {
+                vertical-align: middle;
+                fill: $blue;
             }
         }
 
@@ -233,6 +244,7 @@
             padding-top: 2em;
             margin-top: 2em;
             color: $grey;
+            font-size: 0.9em;
 
             a {
                 color: $blue;
@@ -251,17 +263,6 @@
             h1 { margin: 0 1em 0 0; }
 
             .btn {
-                display: flex;
-                font-size: 0.7rem;
-                padding: 0.4em 0.6em;
-                color: white;
-
-                @include media($on-mobile) {
-                    display: none;
-                }
-
-                &:hover { color: $orange-dark; }
-
                 & + .btn { margin-left: 1em; }
             }
         }

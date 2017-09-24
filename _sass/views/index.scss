@@ -1,19 +1,15 @@
 .home {
     p a { color: $orange; }
+
     &__header {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 70vh;
+        padding: 5em 0 6em;
         color: white;
         background-color: $orange;
         border-bottom: 2em solid $orange-dark;
         text-align: center;
 
         @include media($on-mobile) {
-            padding: 0 2em;
+            padding: 1em 2em 3em;
         }
 
         .flint-logo {
@@ -21,17 +17,10 @@
             fill: white;
         }
 
-        &__btns {
-            position: absolute;
-            bottom: 2.6em;
-
-            @include media($on-mobile) {
-                bottom: 2em;
-            }
-        }
-
-        &__npm {
+        &__npm p {
             position: relative;
+            display: inline-block;
+            margin-top: 2em;
             font-family: monospace;
             padding: 1em 4em;
             background-color: $grey-dark;
@@ -54,6 +43,11 @@
     }
     
     .section {
+        &__inner {
+            max-width: $max-width;
+            margin: 0 auto;
+        }
+
         &__title {
             margin-top: 0;
             font-size: 1.6em;
@@ -61,15 +55,20 @@
         }
 
         &--one {
-            display: flex;
-            align-items: stretch;
-            justify-content: center;
+
+            .section__inner {
+                display: flex;
+                align-items: stretch;
+                justify-content: center;
+
+                @include media($on-mobile) {
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+
             padding: 3em 0;
 
-            @include media($on-mobile) {
-                align-items: center;
-                flex-direction: column;
-            }
 
             .card {
                 color: $grey;
@@ -88,38 +87,31 @@
         }
 
         &--two {
-            position: relative;
-            display: flex;
-            overflow: hidden;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 0;
-
-            @include media($on-mobile) {
-                flex-direction: column;
-                width: 90%;
-                margin: 0 auto;
-                text-align: center;
-                padding: 1em 0;
-
-                &::after { display: none; }
+            .section__inner {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
+
+            padding: 3em 0;
 
             &__text {
                 font-size: 1.2rem;
-                max-width: 500px;
-                margin-right: 4em;
+                width: 50%;
+                padding-left: 2em;
                 line-height: 1.4;
 
-                @include media($on-laptop) {
+                @include media($on-mobile) {
+                    text-align: center;
                     font-size: 1rem;
-                    margin-right: 0;
-                    margin-left: 1em;
-                    order: 2;
+                    width: 100%;
+                    padding: 0 1em;
                 }
             }
             
             img {
+                width: 50%;
                 animation-name: float;
                 animation-duration: 2s;
                 animation-iteration-count: infinite;
@@ -130,29 +122,16 @@
                     display: none;
                 }
             }
-
-            &::after {
-                position: absolute;
-                content: '';
-                top: 120px;
-                left: -100px;
-                width: 150%;
-                height: 400px;
-                background-color: darken($grey-lighter, 5%);
-                transform: rotate(3deg);
-                z-index: -1;
-
-                @include media($on-laptop) {
-                    transform: rotate(5deg);
-                }
-            }
         }
 
         &--three {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            .section__inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
             padding-bottom: 4em;
 
             @include media($on-mobile) {
@@ -236,14 +215,13 @@
             .js-home-block {
                 position: absolute;
                 display: flex;
-                top: 50%;
-                left: 50%;
-                width: 1024px;
+                top: 0;
+                left: 0;
+                max-width: $max-width;
                 margin: 0 auto;
-                align-items: flex-start;
+                align-items: center;
                 justify-content: center;
                 opacity: 0;
-                transform: translate(-50%, -50%);
                 transition: opacity 200ms $exit;
                 transition-delay: 0;
                 visibility: hidden;
@@ -253,7 +231,8 @@
                     flex-direction: column;
                     align-items: center;
                     text-align: center;
-                    width: 90%;
+                    width: 100%;
+                    height: 100%;
                 }
 
                 .section--four__block__text {
@@ -282,7 +261,10 @@
                 }
 
                 &:nth-child(odd) {
-                    img { order: -1; }
+                    img {
+                        order: -1;
+                        @include media($on-mobile) { order: 0; }
+                    }
 
                     .section--four__block__text {
                         margin-right: 0;
@@ -299,7 +281,7 @@
 
                     h3 {
                         font-size: 1.6em;
-                        margin-top: 3em;
+                        margin-top: 0;
 
                         @include media($on-mobile) { margin-top: 1em; }
                     }
@@ -309,14 +291,17 @@
             }
 
             &__content {
-                position: relative;
                 background-color: darken($grey-lighter, 5%);
-                min-height: 500px;
                 padding: 2em 0;
                 border-top: 1px solid $grey-light;
                 color: $grey;
+                
+                .section__inner {
+                    position: relative;
+                    min-height: 460px;
 
-                @include media($on-mobile) { min-height: 400px; }
+                    @include media($on-mobile) { min-height: 400px; }
+                }
             }
         }
     }
