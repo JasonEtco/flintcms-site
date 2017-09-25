@@ -94,17 +94,15 @@
             }
 
             &__link {
-                display: block;
+                display: inline-block;
                 box-sizing: border-box;
                 color: $grey;
                 text-decoration: none;
                 margin-bottom: 0.5em;
-                width: 100%;
                 border: 1px solid transparent;
 
-                &.is-active {
-                    color: $orange;
-                }
+                &.is-active { color: $orange; }
+                &:hover { color: $grey-dark; }
             }
         }
     }
