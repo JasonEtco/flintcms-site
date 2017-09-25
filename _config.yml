@@ -25,7 +25,10 @@ exclude: [
   'README.md'
 ]
 
+collections:
+  docs:
+    permalink: docs/:title/
+    output: true
+
 # Build settings
 markdown: kramdown
-
-permalink: :categories/:title/
