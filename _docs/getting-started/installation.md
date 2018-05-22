@@ -24,7 +24,7 @@ const flintServer = new Flint({
 flintServer.startServer();
 ```
 
-That's the basics right there! When you're ready, you can run the server by running `node index.js` in your terminal.
+That's the basics right there! When you're ready, you can run the server by running `node index.js` in your terminal. By default your newly created site will be accessible from [https://localhost:4000](http://localhost:4000).
 
 ## .env
 
