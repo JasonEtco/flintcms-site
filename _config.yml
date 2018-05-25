@@ -25,6 +25,8 @@ exclude:
   - vendor
   - node_modules
   - README.md
+  - script
+  - flintcms.gemspec
 
 collections:
   docs:
