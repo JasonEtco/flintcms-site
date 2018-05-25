@@ -17,13 +17,16 @@ github_repo: https://github.com/JasonEtco/flintcms
 docs-github_repo: https://github.com/JasonEtco/flintcms-site
 twitter_username: jasonetco
 github_username:  jasonetco
-exclude: [
-  'node_modules',
-  'gulpfile.babel.js',
-  'package-lock.json',
-  'package.json',
-  'README.md'
-]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - bin
+  - vendor
+  - node_modules
+  - README.md
+  - script
+  - flintcms.gemspec
 
 collections:
   docs:

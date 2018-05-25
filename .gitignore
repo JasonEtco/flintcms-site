@@ -1,6 +1,9 @@
 _site
 .sass-cache
 .jekyll-metadata
-node_modules
 .publish
 .DS_Store
+bin
+vendor
+.bundle
+node_modules
