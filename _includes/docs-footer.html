@@ -1,0 +1,28 @@
+<footer class="docs-post__footer">
+  {% for section in site.data.toc %}
+    {% for link in section[1] %}
+      {% if link == page.path %}
+        {% if forloop.first == false %}
+          {% assign prevI = forloop.index | minus: 2 %}
+          {% assign prev = section[1][prevI] %}
+          {% if prev %}
+            {% for post in site.documents %}
+              {% if post.path == prev %}
+                <a href="{{ post.url }}">{% include svgs/chevron-left.svg %} {{ post.title }}</a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+
+        {% assign next = section[1][forloop.index] %}
+        {% if next %}
+          {% for post in site.documents %}
+            {% if post.path == next %}
+              <a href="{{ post.url }}">{{ post.title }} {% include svgs/chevron-right.svg %}</a>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</footer>

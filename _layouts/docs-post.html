@@ -13,14 +13,7 @@ layout: default
       {{ content }}
     </div>
 
-    <footer class="docs-post__footer">
-      {% if page.previous %}
-        <a href="{{ page.previous.url }}">{% include svgs/chevron-left.svg %} {{ page.previous.title }}</a>
-      {% endif %}
-      {% if page.next %}
-        <a href="{{ page.next.url }}">{{ page.next.title }} {% include svgs/chevron-right.svg %}</a>
-      {% endif %}
-    </footer>
+    {% include docs-footer.html %}
 
     <p class="docs-post__end">Find a mistake or want to help improve this documentation? <a href="{{ site.docs-github_repo }}/edit/master/{{ page.path }}">Suggest changes on GitHub.</a></p>
   </article>
