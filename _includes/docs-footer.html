@@ -14,11 +14,27 @@
           {% endif %}
         {% endif %}
 
-        {% assign next = section[1][forloop.index] %}
+        {% assign nextSection = '' %}
+        {% if forloop.last == false %}
+          {% assign next = section[1][forloop.index] %}
+        {% else %}
+          {% assign doNext = false %}
+          {% for sec in site.data.toc %}
+            {% if doNext == true %}
+              {% assign nextSection = sec[0] | append: ": " %}
+              {% assign next = sec[1][0] %}
+              {% assign doNext = false %}
+            {% endif %}
+            {% if section[0] == sec[0] %}
+              {% assign doNext = true %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
         {% if next %}
           {% for post in site.documents %}
             {% if post.path == next %}
-              <a href="{{ post.url }}" style="margin-left: auto">{{ post.title }} {% include svgs/chevron-right.svg %}</a>
+              <a href="{{ post.url }}" style="margin-left: auto">{{ nextSection }}{{ post.title }} {% include svgs/chevron-right.svg %}</a>
             {% endif %}
           {% endfor %}
         {% endif %}
