@@ -18,7 +18,7 @@
         {% if next %}
           {% for post in site.documents %}
             {% if post.path == next %}
-              <a href="{{ post.url }}">{{ post.title }} {% include svgs/chevron-right.svg %}</a>
+              <a href="{{ post.url }}" style="margin-left: auto">{{ post.title }} {% include svgs/chevron-right.svg %}</a>
             {% endif %}
           {% endfor %}
         {% endif %}
